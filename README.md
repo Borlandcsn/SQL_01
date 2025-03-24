@@ -49,45 +49,45 @@
 
 14) Вывести статистику по месяцам, где общее количество заказов равняется и меньше 350 в месяц из таблицы year_statistics;
 
-SELECT month_name, amount_of_orders
-FROM EDU.year_statistics
-WHERE amount_of_orders <= 350;
+   SELECT month_name, amount_of_orders
+   FROM EDU.year_statistics
+   WHERE amount_of_orders <= 350;
 
 16) Вывести все записи из таблицы за зиму и весну из таблицы из таблицы year_statistics;
 
-SELECT *
-FROM EDU.year_statistics
-WHERE id_month IN (12, 1, 2, 3, 4, 5);
+   SELECT *
+   FROM EDU.year_statistics
+   WHERE id_month IN (12, 1, 2, 3, 4, 5);
 
 18) Вывести 5 свежих заказов, которые оплатили картой из таблицы delivery_list.
 
-SELECT TOP 5 *
-FROM EDU.delivery_list
-WHERE payment_method IN ('Card');
+   SELECT TOP 5 *
+   FROM EDU.delivery_list
+   WHERE payment_method IN ('Card');
 
 Задание cо звёздочкой*
 
 
 11) Необходимо запросом подсчитать количество строк в таблице customers;
 
-SELECT COUNT(*) AS Sum_Records
-FROM EDU.customers;
+   SELECT COUNT(*) AS Sum_Records
+   FROM EDU.customers;
 
 13) Вывести все имена, где есть буква A, из таблицы customers;
 
-SELECT first_name
-FROM EDU.customers
-WHERE first_name LIKE '%A%';
+   SELECT first_name
+   FROM EDU.customers
+   WHERE first_name LIKE '%A%';
 
 15) Запросом перевести строку в верхний регистр, а так же обозвать колонку 'name'. Данные взять из таблицы customers, колонка first_name;
 
-SELECT UPPER(first_name) AS name
-FROM EDU.customers;
+   SELECT UPPER(first_name) AS name
+   FROM EDU.customers;
 
 17) С помощью функции вывести цену с округлением до десятичного числа. Использовать табличку products, вывести столбцы: цена, название.
 
-SELECT menu_name, ROUND(price, 1)
-FROM EDU.products;
+   SELECT menu_name, ROUND(price, 1)
+   FROM EDU.products;
 
 
 
