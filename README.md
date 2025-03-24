@@ -19,11 +19,16 @@
 
 5) Вывести количество клиентов из западного региона из таблицы customers;
 
-SELECT COUNT(district) AS client_west
-FROM EDU.customers
-WHERE district = 'West';
+   SELECT COUNT(district) AS client_west
+   FROM EDU.customers
+   WHERE district = 'West';
 
 7) Вывести максимальное, среднее и минимальное значение заказов за год из таблицы year_statistics;
+
+  SELECT MAX(amount_of_orders) AS MAX,
+	  AVG(amount_of_orders) AS AVG,
+	  MIN(amount_of_orders) AS MIN
+  FROM EDU.year_statistics;
 
 9) Вывести один самый старый заказ из таблицы delivery_list;
 
