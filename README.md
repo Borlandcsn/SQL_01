@@ -70,10 +70,24 @@ WHERE payment_method IN ('Card');
 
 11) Необходимо запросом подсчитать количество строк в таблице customers;
 
+SELECT COUNT(*) AS Sum_Records
+FROM EDU.customers;
+
 13) Вывести все имена, где есть буква A, из таблицы customers;
+
+SELECT first_name
+FROM EDU.customers
+WHERE first_name LIKE '%A%';
 
 15) Запросом перевести строку в верхний регистр, а так же обозвать колонку 'name'. Данные взять из таблицы customers, колонка first_name;
 
+SELECT UPPER(first_name) AS name
+FROM EDU.customers;
+
 17) С помощью функции вывести цену с округлением до десятичного числа. Использовать табличку products, вывести столбцы: цена, название.
+
+SELECT menu_name, ROUND(price, 1)
+FROM EDU.products;
+
 
 
