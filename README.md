@@ -32,15 +32,38 @@
 
 9) Вывести один самый старый заказ из таблицы delivery_list;
 
+   SELECT MIN(date_arrived) AS Min_Date
+   FROM EDU.delivery_list;
+
 10) Вывести все записи, где есть курьеры kate и bob из таблицы courier_info;
+
+    SELECT *
+    FROM EDU.courier_info
+    WHERE first_name IN ('Kate', 'Bob');
 
 12) Вывести статистику по месяцам, где общее количество заказов превысило 351 в месяц из таблицы year_statistics;
 
+   SELECT month_name, amount_of_orders
+   FROM EDU.year_statistics
+   WHERE amount_of_orders > 351;
+
 14) Вывести статистику по месяцам, где общее количество заказов равняется и меньше 350 в месяц из таблицы year_statistics;
+
+SELECT month_name, amount_of_orders
+FROM EDU.year_statistics
+WHERE amount_of_orders <= 350;
 
 16) Вывести все записи из таблицы за зиму и весну из таблицы из таблицы year_statistics;
 
+SELECT *
+FROM EDU.year_statistics
+WHERE id_month IN (12, 1, 2, 3, 4, 5);
+
 18) Вывести 5 свежих заказов, которые оплатили картой из таблицы delivery_list.
+
+SELECT TOP 5 *
+FROM EDU.delivery_list
+WHERE payment_method IN ('Card');
 
 Задание cо звёздочкой*
 
