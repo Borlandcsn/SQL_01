@@ -1,8 +1,21 @@
 1) Вывести все имена из таблицы customers;
 
-
+SELECT first_name
+FROM EDU.customers;
 
 3) Вывести все записи, где регион = юг из таблицы customers;
+
+SELECT district
+FROM EDU.customers
+WHERE district = 'South';
+
+SELECT district
+FROM EDU.customers
+WHERE district IN ('South');
+
+SELECT district
+FROM EDU.customers
+WHERE district LIKE '%South%';
 
 5) Вывести количество клиентов из западного региона из таблицы customers;
 
